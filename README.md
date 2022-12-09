@@ -7,18 +7,15 @@
 1. Create within ReactJS. (Clone this repository)
 2. Convert the provided sketch into a functional web (CSS styles included, not use Bootstrap or any other style library).
 3. The project must be responsive.
-4. Make the connection to the example API:
-- End point:
+4. Make the connection to the API end point:
+
 ```
-https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes
+https://api.bigcartel.com/endlehomegoods/products.js
 ```
-- Header authorization:
-```
-X-RapidAPI-Key: fc70595eb1msh3da63f66b1b7ce5p19f6bcjsnaff40b5cae6a
-X-RapidAPI-Host: tasty.p.rapidapi.com
-```
-5. Apply the principles of clean and reusable code (Use external components)
+
+5. Display the information of the API on the screen (only 9 elements).
+6. Apply the principles of clean and reusable code (Use external components).
 
 ## Web Sketch
 
-![demo](https://user-images.githubusercontent.com/120066995/206599421-665859cf-b055-4f0b-9d4e-d97b812f7ad4.png)
+![demo2](https://user-images.githubusercontent.com/120066995/206735918-7836d642-4276-4075-87b4-0887902dc1e9.png)
