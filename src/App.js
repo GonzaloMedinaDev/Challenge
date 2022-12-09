@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import Fletch from './assets/images/Fletch.svg';
+import Logo from './assets/images/Logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [food, setFood] = useState({});
+  let data = null;
+
+  const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=9&tags=under_30_minutes';
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'fc70595eb1msh3da63f66b1b7ce5p19f6bcjsnaff40b5cae6a',
+      'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+    }
+  };
+  
+  
+  useEffect(() => {
+    fetch(url, options)
+      .then(res => res.json())
+      .then(json => setFood(json.results))
+      .catch(err => console.error('error:' + err));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <img src={Logo} alt="Big Cartel Logo" className="logo" />
+        <img src={Fletch} alt="Fletch Menu" className="fletch" />
       </header>
+      <main>
+      {
+        food.length &&
+        food.map((item) => (
+          <div className="card">
+            <div className="image" style={{ backgroundImage: `url(${item.thumbnail_url})` }} />
+            <div className='content'>
+              <h2>{item.name}</h2>
+              <p>{item.description.length > 110 ? `${item.description}...` : item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+      </main>
     </div>
   );
 }
