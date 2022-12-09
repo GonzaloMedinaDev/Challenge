@@ -12,7 +12,7 @@
 ```
 https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes
 ```
-- Header autorirization:
+- Header authorization:
 ```
 X-RapidAPI-Key: fc70595eb1msh3da63f66b1b7ce5p19f6bcjsnaff40b5cae6a
 X-RapidAPI-Host: tasty.p.rapidapi.com
