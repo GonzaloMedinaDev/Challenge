@@ -19,3 +19,6 @@ X-RapidAPI-Host: tasty.p.rapidapi.com
 ```
 5. Apply the principles of clean and reusable code (Use external components)
 
+## Web Sketch
+
+![demo](https://user-images.githubusercontent.com/120066995/206599421-665859cf-b055-4f0b-9d4e-d97b812f7ad4.png)
